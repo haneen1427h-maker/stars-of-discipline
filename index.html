@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>نجوم الانضباط والتميز</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap">
+
+<style>
+:root{
+--bg:#fbf6ea;
+--card:#fff;
+--ink:#2b2a33;
+--mut:#6b6a75;
+--gold:#c8962e;
+--teal:#0f6b6b;
+--line:#eadfc4;
+--n1:#fff3b8;
+--n2:#d9f2ea;
+--n3:#fde0e6;
+--n4:#e1e6fb;
+--chip:#f3ead2;
+box-sizing:border-box;
+padding-top:env(safe-area-inset-top,0px);
+padding-bottom:env(safe-area-inset-bottom,0px)
+}
+
+@media (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){
+--bg:#17181d;
+--card:#22242b;
+--ink:#f1eee6;
+--mut:#a9a8b3;
+--gold:#e3b657;
+--teal:#5fc4bd;
+--line:#3a3c46;
+--n1:#5b5224;
+--n2:#1f4a43;
+--n3:#58303b;
+--n4:#2f3860;
+--chip:#33353f
+}}
+
+:root[data-theme="dark"]{
+--bg:#17181d;
+--card:#22242b;
+--ink:#f1eee6;
+--mut:#a9a8b3;
+--gold:#e3b657;
+--teal:#5fc4bd;
+--line:#3a3c46;
+--n1:#5b5224;
+--n2:#1f4a43;
+--n3:#58303b;
+--n4:#2f3860;
+--chip:#33353f
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--ink);
+font-family:'Cairo','Segoe UI',Tahoma,Arial,sans-serif;
+line-height:1.7;
+background:radial-gradient(circle at 15% 10%,rgba(200,150,46,.16),transparent 40%),
+radial-gradient(circle at 90% 30%,rgba(15,107,107,.14),transparent 45%),var(--bg);
+background-attachment:fixed
+}
+
+.wrap{max-width:900px;margin:0 auto;padding:16px}
+
+header{
+position:relative;
+overflow:hidden;
+text-align:center;
+background:linear-gradient(135deg,#0b5559,#12807f 55%,#c8962e);
+color:#fff;
+border-radius:28px;
+padding:30px 16px 22px;
+margin-top:6px;
+box-shadow:0 14px 34px rgba(15,107,107,.35)
+}
+
+header::before,header::after{
+content:"✨ ⭐ 🌟 ✨ ⭐";
+position:absolute;
+left:0;right:0;
+font-size:20px;
+letter-spacing:22px;
+opacity:.55;
+text-align:center;
+animation:tw 3.2s ease-in-out infinite
+}
+
+header::before{top:6px}
+header::after{bottom:4px;animation-delay:1.6s}
+
+@keyframes tw{
+50%{opacity:.15;transform:translateY(3px)}
+}
+
+.ini{
+display:block;
+background:rgba(255,255,255,.95);
+color:#0b5559;
+border-radius:18px;
+padding:14px 18px;
+font-size:24px;
+font-weight:800;
+box-shadow:0 6px 16px rgba(0,0,0,.18);
+position:relative;
+z-index:1
+}
+
+h1{
+color:#fff;
+font-size:40px;
+font-weight:800;
+text-shadow:0 3px 10px rgba(0,0,0,.3);
+position:relative;
+z-index:1;
+margin:14px 0 4px
+}
+
+.sub{
+color:#fff;
+position:relative;
+z-index:1;
+font-size:19px;
+font-weight:600;
+margin:14px 0 0
+}
+
+.dear{
+position:relative;
+z-index:1;
+margin:16px auto 0;
+max-width:480px;
+background:rgba(255,255,255,.96);
+color:#2b2a33;
+border:0;
+border-radius:20px;
+padding:14px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.2)
+}
+
+.dear b{color:#0f6b6b;font-size:21px}
+
+h2{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:23px;
+font-weight:800;
+color:var(--ink);
+margin:28px 0 12px
+}
+
+h2::after{
+content:"";
+flex:1;
+height:3px;
+border-radius:3px;
+background:linear-gradient(90deg,var(--gold),transparent)
+}
+
+.grid{
+display:grid;
+gap:12px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr))
+}
+
+.cls{
+--ac:#0f6b6b;
+background:var(--card);
+border:0;
+border-top:6px solid var(--ac);
+border-radius:16px;
+padding:14px;
+box-shadow:0 8px 22px rgba(0,0,0,.09);
+transition:transform .2s,box-shadow .2s;
+counter-reset:s
+}
+
+.cls:hover{
+transform:translateY(-4px);
+box-shadow:0 14px 28px rgba(0,0,0,.15)
+}
+
+.cls:nth-child(2){--ac:#c8962e}
+.cls:nth-child(3){--ac:#d1517a}
+.cls:nth-child(4){--ac:#5b6bd1}
+.cls:nth-child(5){--ac:#2e9e5b}
+.cls:nth-child(6){--ac:#e0762b}
+
+.cls h3{
+display:inline-block;
+background:var(--ac);
+color:#fff;
+border-radius:999px;
+padding:3px 16px;
+font-size:16px;
+margin:0 0 6px
+}
+
+.cls button{
+display:flex;
+align-items:center;
+gap:8px;
+width:100%;
+text-align:right;
+margin-top:6px;
+background:var(--chip);
+color:var(--ink);
+border:1px solid transparent;
+border-radius:10px;
+padding:6px 12px;
+font:inherit;
+font-size:14px;
+cursor:pointer;
+transition:.15s
+}
+
+.cls button::before{
+counter-increment:s;
+content:counter(s,arabic-indic);
+flex:none;
+width:24px;
+height:24px;
+border-radius:50%;
+background:var(--ac);
+color:#fff;
+font-size:12px;
+display:grid;
+place-items:center
+}
+
+.cls button:hover{
+border-color:var(--ac);
+transform:translateX(-3px)
+}
+
+button{
+font:inherit;
+cursor:pointer;
+border:0;
+border-radius:999px;
+padding:8px 16px;
+background:var(--teal);
+color:#fff
+}
+
+form{
+background:var(--card);
+border:0;
+border-radius:20px;
+padding:14px;
+display:grid;
+gap:8px;
+box-shadow:0 8px 22px rgba(0,0,0,.09);
+border-top:6px solid var(--gold)
+}
+
+input,textarea,select{
+font:inherit;
+width:100%;
+padding:9px 12px;
+border-radius:10px;
+border:1px solid var(--line);
+background:var(--bg);
+color:var(--ink)
+}
+
+form button{
+background:linear-gradient(135deg,#c8962e,#e0762b);
+font-weight:800;
+font-size:17px;
+padding:11px;
+box-shadow:0 6px 14px rgba(224,118,43,.35)
+}
+
+.notes{
+display:grid;
+gap:12px;
+grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
+margin-top:14px
+}
+
+.note{
+border-radius:6px 6px 14px 6px;
+padding:14px;
+min-height:110px;
+box-shadow:0 2px 6px rgba(0,0,0,.12);
+word-break:break-word;
+transform:rotate(-1.2deg);
+transition:transform .2s;
+font-size:16px;
+color:#2b2a33
+}
+
+.note:nth-child(even){transform:rotate(1.2deg)}
+.note:hover{transform:rotate(0) scale(1.03)}
+
+.note small{
+display:block;
+margin-top:8px;
+color:#555
+}
+
+.note:nth-child(4n+1){background:#fff3b8}
+.note:nth-child(4n+2){background:#d9f2ea}
+.note:nth-child(4n+3){background:#fde0e6}
+.note:nth-child(4n){background:#e1e6fb}
+
+.msg{
+display:none;
+text-align:center;
+padding:12px;
+margin-top:10px;
+border-radius:12px;
+font-weight:700;
+background:var(--chip);
+color:var(--teal)
+}
+
+.hint{
+color:var(--mut);
+font-size:14px;
+text-align:center;
+margin:0 0 10px
+}
+
+@media(prefers-reduced-motion:reduce){
+header::before,header::after{animation:none}
+.cls,.note{transition:none}
+}
+
+@media(max-width:520px){
+.ini{font-size:20px}
+h1{font-size:32px}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<header>
+<span class="ini">👩‍👧‍👦 ضمن مبادرة أمهات يصنعن الانضباط 💪</span>
+
+<h1>🌟 نجوم الانضباط 🌟</h1>
+
+<p class="sub">
+🏅 الطلاب والطالبات الحاصلون على 100% في الانضباط لشهر جمادى الأولى 🎉
+</p>
+
+<div class="dear">
+<b>💐 عزيزتي الأم</b><br>
+الآن يمكنكِ إرسال بطاقة لابنك / ابنتك 💌
+</div>
+</header>
+
+<h2>🏆 لوحة التميز في الانضباط</h2>
+
+<p class="hint">
+اضغطي على اسم ابنك / ابنتك لإرسال بطاقة
+</p>
+
+<div class="grid" id="hon"></div>
+
+<h2>💬 جدار التشجيع والطموح 🚀</h2>
+
+<form id="f">
+
+<select id="to" required></select>
+
+<input
+id="from"
+placeholder="اسمك (اختياري)"
+maxlength="40"
+>
+
+<textarea
+id="txt"
+rows="3"
+placeholder="اكتبي كلمة لطيفة لابنك / ابنتك..."
+maxlength="280"
+required
+></textarea>
+
+<button type="submit" id="sendBtn">
+أضيفي البطاقة 📌
+</button>
+
+</form>
+
+<div class="msg" id="status"></div>
+
+<div class="notes" id="notes"></div>
+
+</div>
+
+<script type="module">
+
+// =====================================
+// 1. FIREBASE IMPORTS
+// =====================================
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+
+import {
+getFirestore,
+collection,
+addDoc,
+onSnapshot,
+query,
+orderBy,
+limit
+}
+from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+
+
+// =====================================
+// 2. FIREBASE CONFIGURATION
+// =====================================
+
+const firebaseConfig = {
+apiKey: "AIzaSyB0N891_jDiWFzzLGbAMedv9m7d9Er2ee8",
+authDomain: "mawha-1.firebaseapp.com",
+projectId: "mawha-1",
+storageBucket: "mawha-1.firebasestorage.app",
+messagingSenderId: "800785355194",
+appId: "1:800785355194:web:19186f425fe8c44c03cd83",
+measurementId: "G-ETDWJVX7H0"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
+// =====================================
+// 3. STUDENTS NAMES
+// =====================================
+
+const H=[
+
+["الصف الثالث بنين",`بتال محمد مطلق المالكي
+سعود نواف محمدعيد الجهني
+سلمان عبد الرحمن سالم العصماني
+عبد العزيز محمد عبدالله المالكي
+وسام محمد فرج المالكي
+يزن ممدوح مطلق المالكي`],
+
+["الصف الثاني بنين",`عبد الحفيظ محمد مصطفى عبدالله
+عبدالوهاب الحسين عبد الوهاب سعد
+مؤيد مجدي جابر علي
+أمير عبدالله محمد المالكي
+الياس احمد خضير المالكي
+يزيد ممدوح مطلق المالكي
+محمد علي الزبير
+محمد محمد الشيخ على`],
+
+["الصف الثاني بنات",`جنان معتمد عبدالسلام الأمين
+شادن مشعل موسى المالكي
+نهى الحسين عبد الوهاب سعد
+ورد معيضد حسن المالكي`],
+
+["الصف الثالث بنات ١",`جود أحمد مسعود المالكي
+حور خالد سالم العصماني
+غلا دخيل الله احمد المالكي
+رسيل عوض الكريم ابراهيم
+فرح حمدان احمد المالكي
+سقيا السنى حامد محمد
+ندى محمد داود اسماعيل
+وجد سعيد سالم المالكي
+ورود علي عبدالله المالكي
+ياسمين حسن عوض العصماني
+ايلان ياسر عطيان المعافي
+ترف رشيد راشد المالكي
+سديل علي فرج المالكي
+سيلين سعد عطيه المالكي`],
+
+["الصف الأول بنين",`الغضنفر اسلم كمال الحاج
+طلال بندر عبدالله المالكي
+عبدالله راشد محمد المالكي
+عمار سعيد مفتاح المالكي
+مشاري صدام يحيى الادبعي
+نذير واصف حمود محمد`],
+
+["الصف الأول بنات",`أسيل عوض الكريم ابراهيم عبد الله
+ترتيل علي الزبير محمد علي
+تولين محمد الحبيب فضل الله
+حور دخيل الله احمد دخيل الله
+دارين سليمان حسين العفيفي
+ديالا فهد مسيفر المالكي
+رند عبدالرحمن رده المالكي
+ريما حسين حسن العصماني
+سما علي مصرد المالكي
+شهد حسن انور بشير
+صباح فيصل محمد اسماعيل`]
+
+];
+
+
+// =====================================
+// 4. ELEMENTS
+// =====================================
+
+const $ = id => document.getElementById(id);
+
+const to = $("to");
+const hon = $("hon");
+
+let all = [];
+
+const notesCollection = collection(db,"notes");
+
+
+// =====================================
+// 5. CREATE STUDENT LIST
+// =====================================
+
+to.add(new Option("إلى: الجميع","الجميع"));
+
+H.forEach(([cn,list])=>{
+
+const g = document.createElement("optgroup");
+g.label = cn;
+
+const c = document.createElement("div");
+c.className = "cls";
+
+const title = document.createElement("h3");
+title.textContent = "🎓 " + cn;
+
+c.append(title);
+
+list.split("\n").forEach(n=>{
+
+g.append(new Option(n,n));
+
+const b = document.createElement("button");
+
+b.type = "button";
+b.textContent = "⭐ " + n;
+
+b.onclick = ()=>{
+
+to.value = n;
+
+$("f").scrollIntoView({
+behavior:"smooth"
+});
+
+$("txt").focus();
+
+};
+
+c.append(b);
+
+});
+
+to.append(g);
+hon.append(c);
+
+});
+
+
+// =====================================
+// 6. DISPLAY MESSAGES
+// =====================================
+
+function render(){
+
+const box = $("notes");
+
+box.replaceChildren();
+
+all.forEach(n=>{
+
+const c = document.createElement("div");
+c.className = "note";
+
+const message = document.createElement("div");
+message.textContent = n.text || "";
+
+const sender = document.createElement("small");
+
+sender.textContent =
+"إلى " + (n.to || "الجميع") +
+" — من " + (n.from || "أم");
+
+c.append(message);
+c.append(sender);
+
+box.append(c);
+
+});
+
+}
+
+
+// =====================================
+// 7. SEND MESSAGE TO FIREBASE
+// =====================================
+
+$("f").addEventListener("submit",async e=>{
+
+e.preventDefault();
+
+const text = $("txt").value.trim();
+
+if(!text) return;
+
+const note = {
+
+text: text,
+
+to: to.value,
+
+from: $("from").value.trim(),
+
+t: Date.now()
+
+};
+
+const btn = $("sendBtn");
+const status = $("status");
+
+btn.disabled = true;
+btn.textContent = "جارٍ إرسال البطاقة...";
+
+status.style.display = "none";
+
+try{
+
+await addDoc(notesCollection,note);
+
+$("txt").value = "";
+
+status.style.display = "block";
+status.textContent = "💌 تم إرسال بطاقتك بنجاح!";
+
+}catch(error){
+
+console.error("Firebase Error:",error);
+
+status.style.display = "block";
+status.textContent =
+"تعذر إرسال البطاقة، تأكدي من الاتصال وحاولي مجدداً.";
+
+}finally{
+
+btn.disabled = false;
+btn.textContent = "أضيفي البطاقة 📌";
+
+}
+
+});
+
+
+// =====================================
+// 8. REAL-TIME FIREBASE SYNC
+// =====================================
+
+const notesQuery = query(
+notesCollection,
+orderBy("t","desc"),
+limit(100)
+);
+
+onSnapshot(notesQuery,snapshot=>{
+
+all = snapshot.docs.map(doc=>({
+
+id: doc.id,
+...doc.data()
+
+}));
+
+render();
+
+},error=>{
+
+console.error("Firebase Loading Error:",error);
+
+$("status").style.display = "block";
+$("status").textContent =
+"تعذر تحميل الرسائل. يرجى التحقق من إعدادات قاعدة البيانات.";
+
+});
+
+</script>
+
+</body>
+</html>
